@@ -1,3 +1,5 @@
+//Creacion de una funcion para estabecer una conexion con el link
+
 async function obtenerProductosAcer() {
     try {
         const respuesta = await fetch('https://www.acer.com/us-en');
@@ -9,7 +11,7 @@ async function obtenerProductosAcer() {
 
 obtenerProductosAcer();
 
-
+//Verificar la conexion 
 const verificar = async () => {
     try {
         const respuesta = await fetch('https://www.acer.com/us-en');
@@ -21,6 +23,7 @@ const verificar = async () => {
 
 verificar();
 
+//Verificación con deley de 5 segundos
 
 const conexion = (datosConexion) => {
     return new Promise((resolve, reject) => {
@@ -30,6 +33,6 @@ const conexion = (datosConexion) => {
     });
 }
 
-conexion(true) // Reemplaza 'true' o 'false' según si hay conexión o no
+conexion(true)
     .then((mensaje) => console.log(mensaje))
     .catch((error) => console.error(error));
